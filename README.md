@@ -29,6 +29,10 @@ npm run preview
 
 اربط المستودع بمشروع Vercel، واختر Vite إن لم يُكتشف تلقائيًا. استخدم `npm run build` أمرًا للبناء و`dist` مجلدًا للنشر. لا يحتاج التطبيق إلى إعدادات backend.
 
+## النشر على GitHub Pages
+
+ارفع التغييرات إلى فرع `main` لتشغيل سير عمل GitHub Actions تلقائيًا. ينفّذ سير العمل `npm ci` و`npm run build` ثم ينشر مجلد `dist` إلى GitHub Pages. عند أول استخدام، افتح إعدادات المستودع **Settings → Pages** واختر **GitHub Actions** مصدرًا للنشر إذا لم يُفعّل تلقائيًا. بعد نجاح سير العمل، يتوفر الموقع على `https://tigo1123.github.io/To-Do/`.
+
 ## النشر على Netlify
 
 اربط المستودع بموقع Netlify، واضبط أمر البناء على `npm run build` ومجلد النشر على `dist`. يعالج ملف `_redirects` مسارات SPA بإعادة توجيهها إلى `index.html`.
